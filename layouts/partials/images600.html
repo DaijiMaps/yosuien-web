@@ -1,10 +1,1 @@
-{{- if (isset .Params "images") }}
-<div class="images">
-  {{- range .Params.images }}
-    {{- $image := resources.Get . }}
-    {{- with $image }}
-      {{- partial "image" (.Fit "600x400") }}
-    {{- end }}
-  {{- end }}
-</div>
-{{- end }}
+{{- partial "images" (dict "images" .Params.images "size" "600x400") }}
