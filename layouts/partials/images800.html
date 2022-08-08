@@ -3,8 +3,7 @@
   {{- range .Params.images }}
     {{- $image := resources.Get . }}
     {{- with $image }}
-      {{- $i := .Fit "300x200" }}
-  <img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}">
+      {{- partial "image" (.Fit "800x600") }}
     {{- end }}
   {{- end }}
 </div>

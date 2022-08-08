@@ -3,14 +3,7 @@
 <h1>{{ .Title | markdownify }}</h1>
 
 <div class="cover">
-{{ range .Params.images }}
-  {{ $image := resources.Get . }}
-  {{ with $image }}
-    {{ with (.Fit "800x600") }}
-  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{ partial "images800" . }}
 </div>
 
 <main>

@@ -2,13 +2,5 @@
   <h2><span>{{ .Title | markdownify }}</span></h2>
 {{- .Content }}
 
-  <div class="images">
-{{- range .Params.images }}
-  {{- $image := resources.Get . }}
-  {{- with $image }}
-    {{- $i := .Fit "600x400" }}
-    <img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}">
-  {{- end }}
-{{- end }}
-  </div>
+{{- partial "images300.html" . }}
 </li>
