@@ -3,6 +3,10 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* header and footer areas */
@@ -50,6 +54,7 @@ footer, main, nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 p {
   max-width: 40em;
@@ -79,6 +84,9 @@ h1 {
   margin-block-start: 1.5em;
   margin-block-end: 1.5em;
   text-align: center;
+}
+h3, h4 {
+  width: 100%;
 }
 ul {
   padding-inline-start: 1.5em;
@@ -120,4 +128,11 @@ ul.seasons > li {
   font-size: small;
   margin: 0;
   text-align: center;
+}
+
+.map {
+  border: 1px solid black;
+  font-size: xx-large;
+  margin: 1em;
+  padding: 1em;
 }
