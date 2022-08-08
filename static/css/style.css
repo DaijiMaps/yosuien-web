@@ -21,11 +21,17 @@ body {
   text-decoration: none;
   padding: 0.5em;
 }
-.menu, footer { text-align: center; }
+.menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 footer { font-size: small; }
 footer a { text-decoration: none; }
 hr {
   border-style: dashed;
+  width: 100%;
 }
 
 /* code */
@@ -39,6 +45,12 @@ code { background: #f9f9f9; }
 pre code { background: none; }
 
 /* misc elements */
+footer, main, nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 p {
   max-width: 40em;
 }
