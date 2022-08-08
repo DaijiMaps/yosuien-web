@@ -6,7 +6,6 @@
 {{- partial "header.html" . }}
 <h1>{{ .Title | markdownify }}</h1>
 {{- .Content }}
-{{- partial "map.html" . }}
 <h3>庭園について</h3>
 <ul class="{{ .Section }}">
 {{- range (sort $gardenPages ".Params.subscript") }}

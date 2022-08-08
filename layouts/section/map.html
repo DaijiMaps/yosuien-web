@@ -2,12 +2,10 @@
 
 <h1>{{ .Title | markdownify }}</h1>
 
-<div class="cover">
-{{- partial "images800" . }}
-</div>
-
 <main>
 {{- .Content }}
+
+{{- partial "map.html" . }}
 </main>
 
 {{- partial "footer.html" . }}
