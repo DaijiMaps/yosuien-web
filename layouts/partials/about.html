@@ -1,0 +1,6 @@
+<li class="about">
+  <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a> ({{ .Params.subscript | markdownify }})
+{{- .Content }}
+
+{{- partial "images.html" . }}
+</li>

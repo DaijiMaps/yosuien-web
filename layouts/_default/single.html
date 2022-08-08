@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="article-meta">
+  <h1>
+  <span class="title">{{ .Title | markdownify }}</span>
+  </h1>
+
+{{ with .Params.author }}
+  <h2 class="author">
+{{ . }}
+  </h2>
+{{ end }}
+</div>
+
+<main>
+{{ .Content }}
+
+{{ range .Params.images }}
+  <div class="images">
+  {{ $image := resources.Get . }}
+  {{ with $image }}
+    {{ $i := .Fit "600x400" }}
+    <img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}">
+  {{ end }}
+  </div>
+{{ end }}
+</main>
+
+{{ partial "footer.html" . }}

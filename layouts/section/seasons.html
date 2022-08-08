@@ -1,0 +1,17 @@
+{{- partial "header.html" . }}
+
+{{- if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{- end }}
+
+{{- .Content }}
+
+{{- $pages := .Pages }}
+{{- if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+<ul class="seasons">
+{{- range (where $pages "Section" "!=" "") }}
+  {{- partial "season.html" . }}
+{{- end }}
+</ul>
+
+{{- partial "footer.html" . }}

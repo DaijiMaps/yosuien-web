@@ -1,0 +1,23 @@
+baseURL: "http://www2.odn.ne.jp/cap99810/"
+languageCode: "ja"
+defaultContentLanguage: "ja"
+hasCJKLanguage: true
+title: "株式会社養翠園"
+theme: "hugo-xmin"
+menu:
+  main:
+  - name: "表紙"
+    url: ""
+    weight: 1
+  - name: "庭園と建物"
+    url: "abouts/"
+    weight: 2
+  - name: "季節の風景"
+    url: "seasons/"
+    weight: 3
+  - name: "利用のご案内"
+    url: "infos/"
+    weight: 4
+  - name: "よくある質問"
+    url: "questions/"
+    weight: 5
