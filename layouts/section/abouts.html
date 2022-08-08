@@ -1,31 +1,21 @@
-{{- partial "header.html" . }}
-
-{{- if not .IsHome }}
-<h1>{{ .Title | markdownify }}</h1>
-{{- end }}
-
-{{- .Content }}
-
 {{- $pages := .Pages }}
-{{- if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
 {{- $sectionPages := where $pages "Section" "!=" "" }}
 {{- $gardenPages := where $sectionPages "Params.tags" "intersect" (slice "庭園") }}
 {{- $buildingPages := where $sectionPages "Params.tags" "intersect" (slice "建物") }}
 
+{{- partial "header.html" . }}
+<h1>{{ .Title | markdownify }}</h1>
+{{- .Content }}
 <h3>庭園について</h3>
-
-<ul class="abouts">
-  {{- range (sort $gardenPages ".Params.subscript") }}
-    {{- partial "about.html" . }}
-  {{- end }}
+<ul class="{{ .Section }}">
+{{- range (sort $gardenPages ".Params.subscript") }}
+  {{- partial "about.html" . }}
+{{- end }}
 </ul>
-
 <h3>建物について</h3>
-
-<ul class="abouts">
-  {{- range (sort $buildingPages ".Params.subscript") }}
-    {{- partial "about.html" . }}
-  {{- end }}
+<ul class="{{ .Section }}">
+{{- range (sort $buildingPages ".Params.subscript") }}
+  {{- partial "about.html" . }}
+{{- end }}
 </ul>
-
 {{- partial "footer.html" . }}

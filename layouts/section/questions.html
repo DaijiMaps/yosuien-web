@@ -1,24 +1,18 @@
+{{- $pages := .Pages }}
+
 {{- partial "header.html" . }}
-
-{{- if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
-{{- end }}
-
 {{- .Content }}
-
-<ul class="questions">
-  {{- $pages := .Pages }}
-  {{- if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{- range (where $pages "Section" "!=" "") }}
-  <li class="question">
-    <h3><span>{{ .Title | markdownify }}</span></h3>
+<ul class="{{ .Section }}">
+{{- range (where $pages "Section" "!=" "") }}
+  <li>
+    <h3>{{ .Title | markdownify }}</h3>
     <div>
-      {{- .Content }}
+  {{- .Content }}
 
-      {{- partial "images300.html" . }}
+  {{- partial "images300.html" . }}
     </div>
   </li>
-  {{ end }}
+{{- end }}
 </ul>
-
 {{- partial "footer.html" . }}
