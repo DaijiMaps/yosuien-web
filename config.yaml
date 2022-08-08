@@ -18,9 +18,9 @@ menu:
   - name: "利用のご案内"
     url: "infos/"
     weight: 4
-  - name: "マップアプリ"
-    url: "map"
-    weight: 5
   - name: "よくある質問"
     url: "questions/"
+    weight: 5
+  - name: "マップアプリ"
+    url: "map"
     weight: 6
