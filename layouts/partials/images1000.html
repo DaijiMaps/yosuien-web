@@ -1,0 +1,10 @@
+{{- if (isset .Params "images") }}
+<div class="images">
+  {{- range .Params.images }}
+    {{- $image := resources.Get . }}
+    {{- with $image }}
+      {{- partial "image" (.Fit "1000x800") }}
+    {{- end }}
+  {{- end }}
+</div>
+{{- end }}
