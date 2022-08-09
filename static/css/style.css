@@ -94,8 +94,11 @@ ul {
 }
 
 .images {
-  margin: 1em;
+  margin: 0.5em;
   text-align: center;
+}
+.images > img {
+  margin: 0.5em;
 }
 
 /* abouts */
