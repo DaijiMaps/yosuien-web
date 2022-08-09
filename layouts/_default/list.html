@@ -1,22 +1,22 @@
-{{- partial "header.html" . }}
+{{- partial "header.html" . -}}
 
-{{- if not .IsHome }}
+{{- if not .IsHome -}}
 <h1>{{ .Title | markdownify }}</h1>
-{{- end }}
+{{- end -}}
 
-{{- .Content }}
+{{- .Content -}}
 
 <h2>更新履歴</h2>
 
 <ul>
-  {{- $pages := .Pages }}
-  {{- if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{- range (where $pages "Section" "!=" "") }}
+  {{- $pages := .Pages -}}
+  {{- if .IsHome -}}{{- $pages = .Site.RegularPages -}}{{- end -}}
+  {{- range (where $pages "Section" "!=" "") -}}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
     <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
   </li>
-  {{- end }}
+  {{- end -}}
 </ul>
 
-{{- partial "footer.html" . }}
+{{- partial "footer.html" . -}}

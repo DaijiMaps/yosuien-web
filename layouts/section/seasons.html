@@ -1,11 +1,11 @@
-{{- $pages := .Pages }}
+{{- $pages := .Pages -}}
 
-{{- partial "header.html" . }}
+{{- partial "header.html" . -}}
 <h1>{{ .Title | markdownify }}</h1>
-{{- .Content }}
+{{- .Content -}}
 <ul class="seasons">
-{{- range (where $pages "Section" "!=" "") }}
-  {{- partial "season.html" . }}
-{{- end }}
+{{- range (where $pages "Section" "!=" "") -}}
+  {{- partial "season.html" . -}}
+{{- end -}}
 </ul>
-{{- partial "footer.html" . }}
+{{- partial "footer.html" . -}}

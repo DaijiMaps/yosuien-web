@@ -1,21 +1,21 @@
-{{- partial "header.html" . }}
+{{- partial "header.html" . -}}
 
 <div class="article-meta">
   <h1>
   <span class="title">{{ .Title | markdownify }}</span>
   </h1>
 
-{{- with .Params.author }}
+{{- with .Params.author -}}
   <h2 class="author">
-{{- . }}
+{{- . -}}
   </h2>
-{{- end }}
+{{- end -}}
 </div>
 
 <main>
-{{- .Content }}
+{{- .Content -}}
 
-{{- partial "images600" . }}
+{{- partial "images600" . -}}
 </main>
 
-{{- partial "footer.html" . }}
+{{- partial "footer.html" . -}}

@@ -1,12 +1,12 @@
-{{- $images := .images }}
-{{- $size:= .size }}
-{{- if $images }}
+{{- $images := .images -}}
+{{- $size:= .size -}}
+{{- if $images -}}
 <div class="images">
-  {{- range $images }}
-    {{- $image := resources.Get . }}
-    {{- with $image }}
-      {{- partial "image" (.Fit $size) }}
-    {{- end }}
-  {{- end }}
+  {{- range $images -}}
+    {{- $image := resources.Get . -}}
+    {{- with $image -}}
+      {{- partial "image" (.Fit $size) -}}
+    {{- end -}}
+  {{- end -}}
 </div>
-{{- end }}
+{{- end -}}

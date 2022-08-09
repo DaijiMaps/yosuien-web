@@ -1,21 +1,21 @@
-{{- $pages := .Pages }}
-{{- $sectionPages := where $pages "Section" "!=" "" }}
-{{- $gardenPages := where $sectionPages "Params.tags" "intersect" (slice "庭園") }}
-{{- $buildingPages := where $sectionPages "Params.tags" "intersect" (slice "建物") }}
+{{- $pages := .Pages -}}
+{{- $sectionPages := where $pages "Section" "!=" "" -}}
+{{- $gardenPages := where $sectionPages "Params.tags" "intersect" (slice "庭園") -}}
+{{- $buildingPages := where $sectionPages "Params.tags" "intersect" (slice "建物") -}}
 
-{{- partial "header.html" . }}
+{{- partial "header.html" . -}}
 <h1>{{ .Title | markdownify }}</h1>
-{{- .Content }}
+{{- .Content -}}
 <h3>庭園について</h3>
 <ul class="{{ .Section }}">
-{{- range (sort $gardenPages ".Params.subscript") }}
-  {{- partial "about.html" . }}
-{{- end }}
+{{- range (sort $gardenPages ".Params.subscript") -}}
+  {{- partial "about.html" . -}}
+{{- end -}}
 </ul>
 <h3>建物について</h3>
 <ul class="{{ .Section }}">
-{{- range (sort $buildingPages ".Params.subscript") }}
-  {{- partial "about.html" . }}
-{{- end }}
+{{- range (sort $buildingPages ".Params.subscript") -}}
+  {{- partial "about.html" . -}}
+{{- end -}}
 </ul>
-{{- partial "footer.html" . }}
+{{- partial "footer.html" . -}}

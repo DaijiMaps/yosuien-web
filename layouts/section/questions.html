@@ -1,18 +1,18 @@
-{{- $pages := .Pages }}
+{{- $pages := .Pages -}}
 
-{{- partial "header.html" . }}
+{{- partial "header.html" . -}}
 <h1>{{ .Title | markdownify }}</h1>
-{{- .Content }}
+{{- .Content -}}
 <ul class="{{ .Section }}">
-{{- range (where $pages "Section" "!=" "") }}
+{{- range (where $pages "Section" "!=" "") -}}
   <li>
     <h3>{{ .Title | markdownify }}</h3>
     <div>
-  {{- .Content }}
+  {{- .Content -}}
 
-  {{- partial "images320.html" . }}
+  {{- partial "images320.html" . -}}
     </div>
   </li>
-{{- end }}
+{{- end -}}
 </ul>
-{{- partial "footer.html" . }}
+{{- partial "footer.html" . -}}
