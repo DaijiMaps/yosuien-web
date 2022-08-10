@@ -1,4 +1,5 @@
 baseURL: "http://www2.odn.ne.jp/cap99810/"
+copyright: "© {year} 株式会社養翠園"
 languageCode: "ja"
 defaultContentLanguage: "ja"
 hasCJKLanguage: true

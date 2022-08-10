@@ -14,5 +14,5 @@
 電話: ０７３４－４４－１４３０
 </p>
 <p>
-Copyright © yousuien, All rights reserved.
+{{- with replace .Site.Copyright "{year}" now.Year -}}{{- . | markdownify -}}{{- end -}}
 </p>
