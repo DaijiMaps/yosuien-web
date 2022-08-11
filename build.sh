@@ -1,5 +1,5 @@
 #!/bin/sh
 
-hugo --config config.yaml
+hugo --config config.yaml --minify
 
 ./tidy.sh

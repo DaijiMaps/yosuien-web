@@ -1,6 +1,6 @@
 #!/bin/sh
 
-hugo --config config.yaml,config-odn.yaml
+hugo --config config.yaml,config-odn.yaml --minify
 
 ./tidy.sh
 

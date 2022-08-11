@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="{{ . | relURL }}" />
+{{- $css := resources.Get . | minify -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
