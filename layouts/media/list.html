@@ -1,0 +1,12 @@
+{{- $pages := .Pages -}}
+{{- $sectionPages := where $pages "Section" "!=" "" -}}
+
+{{- partial "header.html" . -}}
+<h1>{{ .Title | markdownify }}</h1>
+{{- .Content -}}
+<ul class="{{ .Section }}">
+{{- range (sort $sectionPages ".Params.subscript") -}}
+  {{- partial "media.html" . -}}
+{{- end -}}
+</ul>
+{{- partial "footer.html" . -}}

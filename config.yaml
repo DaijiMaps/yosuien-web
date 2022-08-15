@@ -16,12 +16,15 @@ menu:
   - name: "季節の風景"
     url: "seasons/"
     weight: 3
+  - name: "メディア"
+    url: "media/"
+    weight: 4
   - name: "利用のご案内"
     url: "infos/"
-    weight: 4
+    weight: 5
   - name: "よくある質問"
     url: "questions/"
-    weight: 5
+    weight: 6
   - name: "マップアプリ"
     url: "map"
-    weight: 6
+    weight: 7
