@@ -9,13 +9,17 @@
 <h3>庭園について</h3>
 <ul class="{{ .Section }}">
 {{- range (sort $gardenPages ".Params.subscript") -}}
-  {{- partial "about.html" . -}}
+  {{- if (isset .Params "images") -}}
+    {{- partial "about.html" . -}}
+  {{- end -}}
 {{- end -}}
 </ul>
 <h3>建物について</h3>
 <ul class="{{ .Section }}">
 {{- range (sort $buildingPages ".Params.subscript") -}}
-  {{- partial "about.html" . -}}
+  {{- if (isset .Params "images") -}}
+    {{- partial "about.html" . -}}
+  {{- end -}}
 {{- end -}}
 </ul>
 {{- partial "footer.html" . -}}

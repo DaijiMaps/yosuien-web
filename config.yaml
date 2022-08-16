@@ -19,7 +19,7 @@ menu:
   - name: "メディア"
     url: "media/"
     weight: 4
-  - name: "利用のご案内"
+  - name: "利用の案内"
     url: "infos/"
     weight: 5
   - name: "よくある質問"
