@@ -2,5 +2,5 @@
   <h2>{{ .Title | markdownify }}</h2>
 {{- .Content -}}
 
-{{- partial "images320.html" . -}}
+{{- partial "images320.html" (dict "images" .Params.images) -}}
 </li>

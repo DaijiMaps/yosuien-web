@@ -3,7 +3,7 @@
 <h1>{{ .Title | markdownify }}</h1>
 
 <div class="cover">
-{{- partial "images800" . -}}
+{{- partial "images800" (dict "images" .Params.images) -}}
 </div>
 
 <main>

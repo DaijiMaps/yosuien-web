@@ -15,7 +15,7 @@
 <main>
 {{- .Content -}}
 
-{{- partial "images600" . -}}
+{{- partial "images600" (dict "images" .Params.images) -}}
 </main>
 
 {{- partial "footer.html" . -}}

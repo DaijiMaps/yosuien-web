@@ -2,5 +2,5 @@
   <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a> ({{ .Params.subscript | markdownify }})
 {{- .Content -}}
 
-{{- partial "images320.html" . -}}
+{{- partial "images320.html" (dict "images" (first 1 .Params.images)) -}}
 </li>

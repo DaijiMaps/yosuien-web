@@ -10,7 +10,7 @@
     <div>
   {{- .Content -}}
 
-  {{- partial "images320.html" . -}}
+  {{- partial "images320.html" (dict "images" .Params.images) -}}
     </div>
   </li>
 {{- end -}}

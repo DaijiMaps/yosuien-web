@@ -13,6 +13,6 @@
 {{- end -}}
   <p>{{- partial "yyyymmdd" $date -}}作成／{{- partial "yyyymmdd" $lastmod -}}更新</p>
 {{- .Content -}}
-{{- partial "images600" . -}}
+{{- partial "images600" (dict "images" .Params.images) -}}
 </main>
 {{- partial "footer.html" . -}}

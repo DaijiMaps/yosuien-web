@@ -7,7 +7,7 @@
 
 {{- partial "map.html" . -}}
 
-{{- partial "images1000.html" . -}}
+{{- partial "images1000.html" (dict "images" .Params.images) -}}
 </main>
 
 {{- partial "footer.html" . -}}
