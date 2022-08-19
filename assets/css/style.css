@@ -134,6 +134,8 @@ ul.seasons > li {
   text-align: center;
 }
 
+/* map */
+
 .map {
   border: 1px solid black;
   font-size: xx-large;
@@ -141,6 +143,8 @@ ul.seasons > li {
   padding: 1em;
   text-align: center;
 }
+
+/* mapframe */
 
 .mapframe {
   min-height: 20em;
@@ -160,8 +164,8 @@ ul.seasons > li {
   pointer-events: none;
 
   height: calc(100vh - 2em);
-  max-height: 80em;
+  max-height: 60em;
 
   width: calc(100vw - 2em);
-  max-width: 60em;
+  max-width: 45em;
 }
