@@ -1,3 +1,5 @@
+{{- $title := .Title | markdownify -}}
+
 {{- partial "header.html" . -}}
 
 <div class="article-meta">
@@ -16,6 +18,15 @@
 {{- .Content -}}
 
 {{- partial "images600" (dict "images" .Params.images) -}}
+
+{{- with .Params.map -}}
+{{- if and .url .name .zoom -}}
+{{- $url := .url -}}
+{{- $name := .name -}}
+{{- $zoom := .zoom -}}
+{{- partial "mapframe.html" (dict "url" $url "title" $title "name" $name "zoom" $zoom) -}}
+{{- end -}}
+{{- end -}}
 </main>
 
 {{- partial "footer.html" . -}}

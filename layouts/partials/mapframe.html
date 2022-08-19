@@ -1,0 +1,7 @@
+{{- $src := printf "%s?name=%s&zoom=%s" .url .name .zoom -}}
+<div class="mapframe">
+  <a target="_blank" href="{{ $src }}">
+    <iframe title="{{ .title }}" src="{{ $src }}">
+    </iframe>
+  </a>    
+</div>  

@@ -59,7 +59,7 @@ footer, main, nav {
 p {
   max-width: 40em;
 }
-img, iframe, video { max-width: 100%; }
+img, iframe, video { max-width: calc(100vw - 2em); }
 img {
   height: auto;
   width: auto;
@@ -140,4 +140,25 @@ ul.seasons > li {
   margin: 1em;
   padding: 1em;
   text-align: center;
+}
+
+.mapframe {
+  min-height: 20em;
+  width: 100%;
+}
+.mapframe > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.mapframe > a > iframe {
+  display: block;
+
+  height: calc(100vh - 2em);
+  max-height: 80em;
+
+  width: calc(100vw - 2em);
+  max-width: 60em;
 }
