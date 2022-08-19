@@ -157,6 +157,7 @@ ul.seasons > li {
 }
 .mapframe > a > iframe {
   display: block;
+  pointer-events: none;
 
   height: calc(100vh - 2em);
   max-height: 80em;
