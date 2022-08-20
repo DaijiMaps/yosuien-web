@@ -183,4 +183,6 @@ ul.seasons > li {
 
   width: calc(100vw - 2em);
   max-width: 45em;
+
+  border: none;
 }
