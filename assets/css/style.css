@@ -118,7 +118,7 @@ ul.seasons {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 1em;
+  padding: 0;
   width: 100%;
   overflow: scroll;
 }
