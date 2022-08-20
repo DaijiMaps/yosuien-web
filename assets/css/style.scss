@@ -14,28 +14,9 @@ body {
   width: 100vw;
 }
 
+@import './menu.scss';
+
 /* header and footer areas */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-}
-.menu li {
-  border: 0.1px solid black;
-  display: inline-block;
-}
-.menu a {
-  display: block;
-  text-decoration: none;
-  padding: 0.5em;
-}
-.menu {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 footer { font-size: small; }
 footer a { text-decoration: none; }
 hr {
@@ -149,40 +130,8 @@ ul.seasons > li {
   text-align: center;
 }
 
-/* map */
+@import './map.scss';
 
-.map {
-  border: 1px solid black;
-  font-size: xx-large;
-  margin: 1em;
-  padding: 1em;
-  text-align: center;
-}
+@import './mapframe.scss';
 
-/* mapframe */
-
-.mapframe {
-  min-height: 20em;
-  width: 100%;
-}
-.mapframe > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  height: 100%;
-  width: 100%;
-}
-.mapframe > a > iframe {
-  display: block;
-  pointer-events: none;
-
-  height: calc(100vh - 2em);
-  max-height: 60em;
-
-  width: calc(100vw - 2em);
-  max-width: 45em;
-
-  border: none;
-}
+@import './cards.scss';
