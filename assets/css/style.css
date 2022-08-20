@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1000px;
   margin: auto;
@@ -7,6 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 /* header and footer areas */
@@ -59,7 +64,8 @@ footer, main, nav {
 p {
   max-width: 40em;
 }
-img, iframe, video { max-width: calc(100vw - 2em); }
+img, iframe, video {
+}
 img {
   height: auto;
   width: auto;
@@ -94,11 +100,16 @@ ul {
 }
 
 .images {
-  margin: 0.5em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .images > img {
   margin: 0.5em;
+  max-width: calc(100% - 1em);
+  object-fit: contain;
 }
 
 /* abouts */
@@ -108,12 +119,16 @@ ul.seasons {
   flex-wrap: wrap;
   list-style: none;
   padding: 1em;
+  width: 100%;
+  overflow: scroll;
 }
 ul.abouts > li,
 ul.seasons > li {
   border: 0.1px solid black;
   flex: 1 20em;
+  flex-shrink: 2;
   padding: 1em;
+  overflow: scroll;
 }
 
 /* infos */
