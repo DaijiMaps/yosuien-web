@@ -80,19 +80,6 @@ ul {
   padding-inline-end: 0.75em;
 }
 
-.images {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.images > img {
-  margin: 0.5em;
-  max-width: calc(100% - 1em);
-  object-fit: contain;
-}
-
 /* abouts */
 ul.abouts,
 ul.seasons {
@@ -110,6 +97,16 @@ ul.seasons > li {
   flex-shrink: 2;
   padding: 1em;
   overflow: scroll;
+}
+ul.cards {
+  list-style: none;
+  overflow: scroll;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul.cards > li {
+  overflow: scroll;
+  box-sizing: border-box;
 }
 
 /* infos */
@@ -131,7 +128,6 @@ ul.seasons > li {
 }
 
 @import './map.scss';
-
 @import './mapframe.scss';
-
 @import './cards.scss';
+@import './images.scss';

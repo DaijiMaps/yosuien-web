@@ -3,7 +3,7 @@
 {{- partial "header.html" . -}}
 <h1>{{ .Title | markdownify }}</h1>
 {{- .Content -}}
-<ul class="seasons">
+<ul class="cards">
 {{- range (where $pages "Section" "!=" "") -}}
   {{- partial "season.html" . -}}
 {{- end -}}

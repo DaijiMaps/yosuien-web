@@ -7,7 +7,7 @@
 <h1>{{ .Title | markdownify }}</h1>
 {{- .Content -}}
 <h3>庭園について</h3>
-<ul class="{{ .Section }}">
+<ul class="cards">
 {{- range (sort $gardenPages ".Params.subscript") -}}
   {{- if (isset .Params "images") -}}
     {{- partial "about.html" . -}}
@@ -15,7 +15,7 @@
 {{- end -}}
 </ul>
 <h3>建物について</h3>
-<ul class="{{ .Section }}">
+<ul class="cards">
 {{- range (sort $buildingPages ".Params.subscript") -}}
   {{- if (isset .Params "images") -}}
     {{- partial "about.html" . -}}

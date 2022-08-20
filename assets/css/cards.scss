@@ -1,15 +1,17 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(auto, 30em));
   grid-gap: 0;
   max-width: 100%;
 }
 .card {
-  display: grid;
+/*
+  display: flex;
+  flex-direction: column;
   grid-template-rows: max-content 1em 1fr;
+*/
   border: 0.5px solid black;
   padding: 1em;
-  max-width: 100%;
 }
 .card img {
   object-fit: cover;
