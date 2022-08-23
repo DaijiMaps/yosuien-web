@@ -1,0 +1,12 @@
+.images {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.images > img {
+  margin: 0.5em;
+  max-width: calc(100% - 1em);
+  object-fit: contain;
+}
