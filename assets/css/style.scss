@@ -127,6 +127,13 @@ ul.cards > li {
   text-align: center;
 }
 
+.notice {
+  border: 1px solid black;
+  font-size: 1.5em;
+  margin: 1em;
+  padding: 1.5em;
+}
+
 @import './map.scss';
 @import './mapframe.scss';
 @import './cards.scss';
